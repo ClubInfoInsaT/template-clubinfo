@@ -1,0 +1,50 @@
+\documentclass[10pt]{article}
+\input{preambule}
+
+\title{Titre du document}
+\author{Auteur}
+\date{La date}
+
+\rhead{Club Info INSA Toulouse}
+\lhead{Nom du document}
+
+% R : right, L : Left, C: center || \thepage pour le numéro de page, sinon un texte ou une image
+
+\fancyfoot[C]{% Pied de page centré
+     \begin{tikzpicture}
+  % Première section de couleur rouge
+  \fill[red] (0,0) rectangle (7.5,0.1);
+  % Deuxième section de couleur vert
+  \fill[jaunetux] (7.5,0) rectangle (15,0.1);
+\end{tikzpicture}
+    \color{black} \\
+    \thepage% Numéro de page
+  }
+%Barre de progression
+
+\begin{document}
+    \maketitle
+    \begin{center}
+    \includegraphics[width=10cm]{logo dos pull ecran blanc.png}
+    \end{center}
+    \begin{center}
+    \end{center}
+    \newpage
+    \AddToShipoutPicture{\BackgroundPic} 
+    \fontsize{12}{12}\selectfont
+    \tableofcontents % table des matières
+    \newpage % saut de page
+    
+    \section{Une première section}
+    
+    \section{Une seconde section}
+    
+    \subsection{Une sous section}
+
+    Une énumération :
+    \begin{enumerate}
+        \item voila
+        \item bof
+    \end{enumerate}
+
+\end{document}

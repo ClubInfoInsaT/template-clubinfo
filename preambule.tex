@@ -1,0 +1,37 @@
+\usepackage[utf8]{inputenc}
+\fontshape{n}
+\pagestyle{empty}
+\usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{amsmath, amsfonts,atbegshi, fancyhdr, graphicx, float, hyperref, xcolor, framed, dsfont, latexsym , upgreek , datetime , xcolor , caption, listings ,tikz, hyperref,eso-pic, transparent}
+\usepackage[newfloat]{minted}
+
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\footskip}{32.05098pt}
+
+
+%%cadre d'une certaine couleur
+\newenvironment{cadre}[1]{%
+    \definecolor{bord}{HTML}{#1}
+    \colorlet{fond}{bord!20}
+    \def\FrameCommand{{\color{bord}\vrule width 3pt}\colorbox{fond}}
+    \MakeFramed {\advance\hsize-\width \FrameRestore}
+    \noindent
+}{\endMakeFramed}
+
+%Image de fond
+\newcommand\BackgroundPic{
+    \put(0,0){
+        \parbox[b][\paperheight]{\paperwidth}{
+            \centering
+            \vfill
+            \transparent{0.25}
+            \includegraphics[width=10cm,keepaspectratio]{logo dos pull ecran blanc.png} 
+            \vfill
+        }
+    }
+}
+\definecolor{jaunetux}{RGB}{223,175,44}
+% Nombre total de pages (à remplacer par le nombre de pages réel)
